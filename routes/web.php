@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('member.login');
 });
+
+Route::get('order', function () {
+    return view('order.index');
+});
+
+Route::get('pause-order', function () {
+    return view('pause-order.index');
+});

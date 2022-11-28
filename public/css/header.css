@@ -8,7 +8,7 @@
 	width:100%;
 	box-sizing: border-box;
 
-	padding:1rem;
+	/* padding:1rem; */
 	position: sticky;
 	position: -webkit-sticky; /* Safari */
 	top:0;

@@ -27,4 +27,4 @@ btn_menu.addEventListener("click", toggleMenu);
 btn_order.addEventListener("click", toggleOrder);
 
 // This for debugs:
-toggleMenu();
+// toggleMenu();
