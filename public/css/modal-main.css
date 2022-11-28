@@ -1,0 +1,93 @@
+#modal
+{
+	display:block;
+	position:fixed;
+	top:calc(0px + 53px);
+	left:0;
+	width:100%;
+	height:calc(200vh - var(--menuHeight));
+	background:#0008;
+	z-index:0;
+
+	display:none;
+	opacity:0;
+	animation-duration:0.5s;
+}
+/* ======= */
+/* CONTENT */
+/* ======= */
+#modal .content
+{
+	background:#fff;
+	width:80%;
+	width:400px;
+	height:calc(100vh - var(--menuHeight));
+	overflow-y:auto;
+	animation-duration:0.5s;
+}
+
+@media (max-width: 992px)
+{
+	#modal .content
+	{
+		width:80%;
+	}
+}
+
+#modal .content.left
+{
+	float:left;
+	margin-left:-100%;
+}
+
+#modal .content.right
+{
+	float:right;
+	margin-right:-100%;
+}
+
+#modal.modal_background_fadein { animation-name:modalBackgoundFadeIn; }
+#modal.modal_background_fadeout { animation-name:modalBackgoundFadeOut; }
+#modal .content.modal_left_fadein { animation-name:contentLeftFadeIn; }
+#modal .content.modal_right_fadein { animation-name:contentRightFadeIn; }
+#modal .content.modal_left_fadeout { animation-name:contentLeftFadeOut; }
+#modal .content.modal_right_fadeout { animation-name:contentRightFadeOut; }
+
+@keyframes contentLeftFadeIn 
+{
+  0%   {margin-left: -100%;}
+  100% {margin-left: 0%;}
+}
+
+@keyframes contentRightFadeIn 
+{
+  0%   {margin-right: -100%;}
+  100% {margin-right: 0%;}
+}
+
+@keyframes contentLeftFadeOut
+{
+  0%   {margin-left: 0%;}
+  100% {margin-left: -100%;}
+}
+
+@keyframes contentRightFadeOut
+{
+  0%   {margin-right: 0%;}
+  100% {margin-right: -100%;}
+}
+
+@keyframes modalBackgoundFadeIn
+{
+	0%   {opacity: 0;}
+  	100% {opacity: 1;}
+}
+
+@keyframes modalBackgoundFadeOut
+{
+	0%   {opacity: 1;}
+  	100% 
+	{
+		opacity: 0;
+	}
+}

@@ -1,0 +1,21 @@
+#menu, #modal .content.left
+{
+	background:#96724d;	
+}
+
+#menu a
+{
+	display:inline-block;
+	padding:1rem;
+	width:100%;
+	box-sizing: border-box;
+	margin-top:-1px;
+	text-decoration: none;
+
+	color:#fff8;
+}
+
+#menu a:hover
+{
+	background:#0003;
+}

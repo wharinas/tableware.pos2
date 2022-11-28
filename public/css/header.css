@@ -1,0 +1,19 @@
+#header	
+{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	/* z-index:1; */
+	width:100%;
+	box-sizing: border-box;
+
+	padding:1rem;
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+	top:0;
+
+	background-color:#55300e;
+	color:#fff	;
+
+}
