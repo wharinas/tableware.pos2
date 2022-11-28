@@ -195,8 +195,21 @@
 				</div>
 			@endforeach
 
-			<div>
-
+			<div style=" text-align:right; font-weight: bold; border-top:solid 1px #000; border-bottom:double 3px #000; padding:0.5rem 0; font-size:1.2rem;">
+				<div style="margin-bottom:0.5rem;">
+					<span style="margin-right:2rem;">รวม</span>
+					<span>{{ number_format(99999) }}</span>
+				</div>
+				<div style="margin-bottom:0.5rem;">
+					<span style="margin-right:2rem;">ส่วนลด</span>
+					<span>{{ number_format(99999) }}</span>
+				</div>
+				<div style="margin-bottom:0.5rem;">
+					<span style="margin-right:2rem;">ราคาสุทธิ</span>
+					<span>
+						{{ Form::text('price', 1234567890123, ['class' => 'form-control', 'style' => 'width:15ch; text-align:right;'])}}
+					</span>
+				</div>
 			</div>
 		</div>
 		<div class="footer">
