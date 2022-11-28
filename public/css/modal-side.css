@@ -1,4 +1,4 @@
-#modal
+#modal-side
 {
 	display:block;
 	position:fixed;
@@ -6,14 +6,14 @@
 	left:0;
 	width:100%;
 	height:calc(200vh - var(--menuHeight));
-	background:#0008;
+	background:#0005;
 	z-index:0;
 
 	display:none;
 	opacity:0;
-	animation-duration:0.5s;
+	animation-duration:0.2s;
 }
-#modal .background
+#modal-side .background
 {
 	cursor:pointer;
 	width:100%; 
@@ -24,42 +24,42 @@
 /* ======= */
 /* CONTENT */
 /* ======= */
-#modal .content
+#modal-side .content
 {
 	background:#fff;
 	width:80%;
 	width:400px;
 	height:calc(100vh - var(--menuHeight));
 	overflow-y:auto;
-	animation-duration:0.5s;
+	animation-duration:0.2s;
 }
 
 @media (max-width: 992px)
 {
-	#modal .content
+	#modal-side .content
 	{
 		width:80%;
 	}
 }
 
-#modal .content.left
+#modal-side .content.left
 {
 	float:left;
 	margin-left:-100%;
 }
 
-#modal .content.right
+#modal-side .content.right
 {
 	float:right;
 	margin-right:-100%;
 }
 
-#modal.modal_background_fadein { animation-name:modalBackgoundFadeIn; }
-#modal.modal_background_fadeout { animation-name:modalBackgoundFadeOut; }
-#modal .content.modal_left_fadein { animation-name:contentLeftFadeIn; }
-#modal .content.modal_right_fadein { animation-name:contentRightFadeIn; }
-#modal .content.modal_left_fadeout { animation-name:contentLeftFadeOut; }
-#modal .content.modal_right_fadeout { animation-name:contentRightFadeOut; }
+#modal-side.modal_background_fadein { animation-name:modalBackgoundFadeIn; }
+#modal-side.modal_background_fadeout { animation-name:modalBackgoundFadeOut; }
+#modal-side .content.modal_left_fadein { animation-name:contentLeftFadeIn; }
+#modal-side .content.modal_right_fadein { animation-name:contentRightFadeIn; }
+#modal-side .content.modal_left_fadeout { animation-name:contentLeftFadeOut; }
+#modal-side .content.modal_right_fadeout { animation-name:contentRightFadeOut; }
 
 @keyframes contentLeftFadeIn 
 {

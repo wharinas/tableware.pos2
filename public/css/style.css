@@ -1,0 +1,68 @@
+:root
+{
+	--menuHeight:53px;
+	--mainColor1:#55300e;
+	--mainColor2:#96724d;
+	--mainColor3:#e3c099;
+	--mainColor4:#ffff;
+}	
+
+html, body
+{
+	padding:0;
+	margin:0;
+
+	font-family:'Sarabun';
+}
+
+
+#body
+{
+	
+	padding:1rem;
+	min-height:calc(100vh - (var(--menuHeight) + 2rem));
+	background:#eee;
+	/* min-height:120vh; */
+}
+
+/* Main Styles:  */
+.block  
+{
+	background:#fff; 
+	padding:1rem; 
+	border:solid 1px #0003; 
+	border-radius:0.3rem;
+}
+/* Display:flex */
+.flex-row-space-between-center
+{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+a
+{
+	text-decoration: none;
+}
+/* class additional: คลาสเพิ่มรายละเอียดให้กับวัตถุ */
+.cursor-pointer
+{
+	cursor:pointer;
+}
+
+.shadow
+{
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* FORM: */
+.form-control
+, .form-control:focus
+{
+	border:solid 1px #ccc;
+	width:100%;
+	border-radius:4px;
+}

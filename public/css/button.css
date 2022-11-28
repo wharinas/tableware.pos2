@@ -1,0 +1,29 @@
+/* Button */
+.btn
+{
+	width:100%; 
+	padding:0.5rem 1rem; 
+	font-weight:bold; 
+	text-align:center; 
+	border-radius:0.3rem;
+
+	cursor:pointer;
+}
+/* Primary */
+.btn.btn-primary
+{
+	background:var(--mainColor2); 
+	color:var(--mainColor4);
+}
+/* Secondery */
+.btn.btn-secondery
+{
+	border:solid 2px var(--mainColor2); 
+	background:var(--mainColor4);
+	color:var(--mainColor2);
+}
+
+.btn.btn-secondery:hover
+{
+	
+}

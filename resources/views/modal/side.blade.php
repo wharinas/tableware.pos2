@@ -1,6 +1,8 @@
-<link rel="stylesheet" href="{{ asset('css/modal-main.css') }}">
+@push('css')
+<link rel="stylesheet" href="{{ asset('css/modal-side.css') }}">
+@endpush
 
-<div id="modal">
+<div id="modal-side">
 	<div class="background"></div>
 	<div class="content left">
 		@include('themes.template1.inc.menu')
@@ -9,5 +11,5 @@
 </div>
 
 @push('js')
-	<script src="{{ asset('js/modal.js') }}"></script>
+	<script src="{{ asset('js/modal-side.js') }}"></script>	
 @endpush

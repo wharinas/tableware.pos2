@@ -1,6 +1,6 @@
 function toggleMenu()
 {
-	const menuModal  = new Modal();
+	const menuModal  = new ModalSide();
 	const has_active = menuModal.check.left();
 
 	if (!has_active)
@@ -11,7 +11,7 @@ function toggleMenu()
 
 function toggleOrder()
 {
-	const menuModal  = new Modal();
+	const menuModal  = new ModalSide();
 	const has_active = menuModal.check.right();
 
 	if (!has_active)

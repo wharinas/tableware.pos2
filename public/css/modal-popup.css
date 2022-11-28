@@ -1,0 +1,81 @@
+#modal-popup
+{
+	position:fixed;
+	top:calc(0px + 53px);
+	left:0;
+	width:100%;
+	height:calc(100vh - var(--menuHeight));
+
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+	animation-duration: 0.2s;
+
+	display:none;
+}
+
+#modal-popup .background
+{
+	background:#0005;
+	cursor:pointer;
+	width:100%; 
+	height:100vh; 
+	position:absolute; 
+	z-index:-1;
+}
+
+#modal-popup .modal
+{
+	width:40%;
+	background:#fff;
+	box-sizing: border-box;
+
+	display:flex;
+	flex-direction: column;
+}
+
+#modal-popup .modal-header,
+#modal-popup .modal-body,
+#modal-popup .modal-footer
+{
+	padding:1rem;
+}
+/* HEADER */
+#modal-popup .modal-header
+{
+	text-align:right;
+}
+
+#modal-popup .modal-header .btn-close
+{
+	display:flex;
+	flex-direction: row;
+	justify-content:right;
+	align-items: center;
+	font-weight:bold;
+	color:#e00;
+}
+
+@media (max-width:992px)
+{
+	#modal-popup .modal
+	{
+		width:80%;
+	}
+}
+
+#modal-popup.fadein { animation-name:modalPopupFadein; }
+#modal-popup.fadeout { animation-name:modalPopupFadeout; }
+
+@keyframes modalPopupFadein
+{
+  0%   { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes modalPopupFadeout
+{
+  0%   { opacity:1; }
+  100% { opacity:0; }
+}

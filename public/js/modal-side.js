@@ -1,35 +1,13 @@
-class Modal
+class ModalSide
 {
-// =========
-// VARIABLE:
-// =========
-	obj = {
-		background: document.querySelector('#modal'),
-		left      : document.querySelector('#modal .content.left'),
-		right     : document.querySelector('#modal .content.right'),
-	};
 // ======
 // CHECK:
 // ======
-	check = {
-		background : function () {
-			const obj        = document.querySelector('#modal');
-			const has_active = obj.className.indexOf('active') > -1;
-
-			return (has_active);
-		},
-		left : function () {
-			const obj        = document.querySelector('#modal .content.left');
-			const has_active = obj.className.indexOf('active') > -1;
-
-			return (has_active);
-		},
-		right : function () {
-			const obj        = document.querySelector('#modal .content.right');
-			const has_active = obj.className.indexOf('active') > -1;
-
-			return (has_active);
-		},
+	check = 
+	{
+		background: () => (document.querySelector('#modal-side').className.indexOf('active') > -1),
+		left      : () => (document.querySelector('#modal-side .content.left').className.indexOf('active') > -1),
+		right     : () => (document.querySelector('#modal-side .content.right').className.indexOf('active') > -1),
 	};
 // ==========
 // CALL: เรียก
@@ -37,8 +15,7 @@ class Modal
 	call(side, element, target)
 	{
 		// call backgroudn when no background:
-		if (!this.check.background())
-			this.#callBackground();
+		this.#callBackground();
 		// banish other side when other side has active.
 		if (side == 'left' && this.check.right())
 			this.#banishRight();
@@ -53,31 +30,31 @@ class Modal
 
 	#callBackground()
 	{
-		const obj = document.querySelector('#modal');
+		const obj = document.querySelector('#modal-side');
 
 		obj.classList.remove("modal_background_fadein");
 		obj.classList.remove("modal_background_fadeout");
 		obj.classList.add("modal_background_fadein");
-		obj.style.opacity = '1';
 		obj.classList.add('active');
+		obj.style.opacity = '1';
 		obj.style.display = 'block';
 	}
 
 	#callLeft()
 	{
-		const obj = document.querySelector('#modal .content.left');
+		const obj = document.querySelector('#modal-side .content.left');
 
 		obj.classList.remove("modal_left_fadein");
 		obj.classList.remove("modal_left_fadeout");
 		obj.classList.add("modal_left_fadein");
 		obj.classList.add('active');
 		obj.style.marginLeft = '0';
-		obj.style.display = 'block';
+		obj.style.display    = 'block';
 	}
 
 	#callRight()
 	{
-		const obj = document.querySelector('#modal .content.right');
+		const obj = document.querySelector('#modal-side .content.right');
 
 		obj.classList.remove("modal_right_fadein");
 		obj.classList.remove("modal_right_fadeout");
@@ -102,7 +79,7 @@ class Modal
 
 	#banishBackground()
 	{
-		const obj = document.querySelector('#modal');
+		const obj = document.querySelector('#modal-side');
 
 		obj.classList.remove("modal_background_fadein");
 		obj.classList.remove("modal_background_fadeout");
@@ -114,7 +91,7 @@ class Modal
 
 	#banishLeft()
 	{
-		const obj = document.querySelector('#modal .content.left');
+		const obj = document.querySelector('#modal-side .content.left');
 
 		obj.classList.remove("modal_left_fadein");
 		obj.classList.remove("modal_left_fadeout");
@@ -126,7 +103,7 @@ class Modal
 
 	#banishRight()
 	{
-		const obj = document.querySelector('#modal .content.right');
+		const obj = document.querySelector('#modal-side .content.right');
 
 		obj.classList.remove("modal_right_fadein");
 		obj.classList.remove("modal_right_fadeout");
@@ -135,11 +112,12 @@ class Modal
 		obj.style.marginRight = '-100%';
 		setTimeout(function() { obj.style.display = 'none'; }, 500);
 	}
+
+	static event()
+	{
+		const modal_background = document.querySelector("#modal-side .background");
+
+		modal_background.addEventListener('click', () => (new ModalSide()).banish('both'));
+	}
 }
-
-const modal_background = document.querySelector("#modal .background");
-
-modal_background.addEventListener('click', function() {
-	const modal = new Modal();
-	modal.banish('both');
-});
+ModalSide.event();

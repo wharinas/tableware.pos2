@@ -13,7 +13,7 @@
 	justify-content: center;
 	align-items: center;
 }
-#header .btn
+#header .btn-menu, #header .btn-order
 {
 	cursor:pointer;
 	height:53px;
@@ -32,9 +32,9 @@
 </style>
 
 <div id="header">
-	<a style=" " class="btn btn-menu">{!! __('icon.list') !!}</a>
+	<a style=" " class="btn-menu">{!! __('icon.list') !!}</a>
 	<a href="{{ url('/') }}" class="title">TABLEWARE</a>
-	<a style="" class="btn btn-order">{!! __('icon.receipt') !!}</a>
+	<a style="" class="btn-order">{!! __('icon.receipt') !!}</a>
 </div>
 
 

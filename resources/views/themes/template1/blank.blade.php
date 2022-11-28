@@ -6,43 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>TABLEWARE POS:</title>
 
-
-	<style>
-		:root
-		{
-			--menuHeight:53px;
-			--mainColor1:#55300e;
-			--mainColor2:#96724d;
-			--mainColor3:#e3c099;
-			--mainColor4:#ffff;
-		}	
-
-		html, body
-		{
-			padding:0;
-			margin:0;
-
-			font-family:'Sarabun';
-		}
-
-	
-		#body
-		{
-			
-			padding:1rem;
-			min-height:calc(100vh - (var(--menuHeight) + 2rem));
-			background:#eee;
-			/* min-height:120vh; */
-		}
-
-		
-	</style>
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/button.css') }}">
 	
 	@stack('css')
 </head>
 <body>
 	@yield('blank-content')
 
+	{{-- @stack('prepend-js') --}}
 	@stack('js')
+	@stack('append-js')
 </body>
 </html>
